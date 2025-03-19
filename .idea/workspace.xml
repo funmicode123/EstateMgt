@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="070ffa18-163b-4c19-9286-48ee15fda6c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/UserInterfaceMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/ResidentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/SecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/Apartment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/ExitPass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/OtpStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/VisitingLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/ApartmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/ExitPassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/VisitingLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ApartmentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/CreateSignupRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ExitPassRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ExitRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/OtpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/OtpValidRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/ApartmentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/CreateSignupResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/ExitPassResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/OtpResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/OtpValidResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/exception/OtpFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/OtpCleanupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/ResidentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/ResidentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/SecurityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/SecurityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/OTPGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/funmicode/service/ResidentServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/funmicode/service/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/request/CreateAccountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/response/CreateAccountResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/exception/EmailExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/model/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/model/Diary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/model/Reminder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/services/UserService/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/services/UserService/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/utils/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/utils/Validations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/test/java/org/example/services/UserService/AppUserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/ClassTask/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/data/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/data/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/dto/Request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/dto/Request/SignupRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/dto/Response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/dto/Response/SignupResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/exceptions/GenderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/java/EMR/service/UserServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/EMR/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/Estore.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/EstoreMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Estore/src/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/NotificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/ReservationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/RoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/repository/NotificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/repository/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/repository/RoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/data/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/AddRoomRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/CreateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/ReservationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/request/UpdateRoomStatusRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/CreateUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/GuestDetailsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/PaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/ReservationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/RoomResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/dto/response/UpdateRoomStatusResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/exception/EmailExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/exception/HotelAppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/NotificationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/ReservationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/RoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/RoomServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/utils/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/utils/ReservationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/HotelMgt/src/main/java/HotelApp/utils/Validations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/NewArray.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/Test/ClassArrayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/Test/FindTheMissingNumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/Test/MutatingDigitsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/src/ClassArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/src/FindMissingNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/src/MutatingDigits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/Task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/src/PhoneNumberValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/test/PhoneNumberValidatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/Tic-Tac-Toe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/src/game/CellValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/src/game/TheGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/src/game/TicTacToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/test/game/TicTacToeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/Test/data/repositories/ItemsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/Test/data/repositories/TrackingInfosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/Test/services/ItemsImplementationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/Test/services/TrackingInfoImplementationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/logistic2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/models/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/models/TrackingInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/repositories/Items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/repositories/ItemsRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/repositories/TrackingInfos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/data/repositories/TrackingInfosRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/dtos/request/CreateItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/dtos/response/CreateItemResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/services/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/services/ItemsImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/services/TrackingInfoImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/services/TrackingInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/longisticApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/longisticApp/logisticApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Exercise/ClassTask/ClassTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/ClassTask/ClassTask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vitePractice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vitePractice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vitePractice/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vitePractice/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vitePractice/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/src/index.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;funmicode123&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/funmicode123/Java-Project.git&quot;,
+    &quot;accountId&quot;: &quot;0643257c-2e0e-4031-8347-fd53ed58004a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2tqiOfnKXmSc5FU9bhRwZsJsXw2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testUserCanCreateAccount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testUserCanLogin_AfterSignup.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL/Desktop/Estate/src/main/java/com/funmicode/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.funmicode.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Estate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.funmicode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.funmicode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.funmicode.service.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.testUserCanCreateAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Estate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.funmicode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.funmicode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.funmicode.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testUserCanCreateAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.testUserCanLogin_AfterSignup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Estate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.funmicode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.funmicode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.funmicode.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testUserCanLogin_AfterSignup" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Estate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.funmicode.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.funmicode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="JUnit.UserServiceImplTest.testUserCanLogin_AfterSignup" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.testUserCanCreateAccount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="070ffa18-163b-4c19-9286-48ee15fda6c2" name="Changes" comment="" />
+      <created>1741085978367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741085978367</updated>
+      <workItem from="1741085978970" duration="21798000" />
+      <workItem from="1741249288809" duration="23583000" />
+      <workItem from="1741777449111" duration="1667000" />
+      <workItem from="1741785523288" duration="81192000" />
+      <workItem from="1742223497862" duration="2995000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/funmicode/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
