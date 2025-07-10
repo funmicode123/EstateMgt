@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI with Maven + MongoDB
 
 on:
   push:
@@ -9,17 +9,36 @@ on:
 jobs:
   test:
     name: Unit Test
-    runs-on: ubuntu-latest  # ✅ Specify a valid runner
+    runs-on: ubuntu-latest
+
+    services:  # ✅ this must be under the job
+      mongodb:
+        image: mongo:6.0
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --eval 'db.runCommand({ ping: 1 })'"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # ✅ Updated to latest stable version
+        uses: actions/checkout@v3
 
       - name: Set up JDK 22
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'  # ✅ Common distribution; use 'zulu' or 'oracle' if needed
+          distribution: 'temurin'
           java-version: '22'
+
+      - name: Wait for MongoDB to be ready
+        run: |
+          for i in {1..10}; do
+            nc -z localhost 27017 && echo "✅ MongoDB is ready" && break
+            echo "⏳ Waiting for MongoDB..."
+            sleep 5
+          done
 
       - name: Build with Maven (skip tests)
         run: mvn -B clean package -DskipTests

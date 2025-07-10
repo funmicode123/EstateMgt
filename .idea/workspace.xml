@@ -9,7 +9,8 @@
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/Bank+Customer+Churn/Bank_Churn_Messy.xlsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/Bank_Churn.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/cohort 22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/request/CreateAccountRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/request/CreateAccountRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/response/CreateAccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/response/CreateAccountResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/exception/EmailExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/exception/EmailExistException.java" afterDir="false" />
@@ -222,6 +223,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\Estate\.github" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.funmicode.service" />
     </key>
@@ -325,7 +329,7 @@
       <workItem from="1746443728984" duration="593000" />
       <workItem from="1746861725561" duration="597000" />
       <workItem from="1747208550807" duration="598000" />
-      <workItem from="1752143247275" duration="2873000" />
+      <workItem from="1752143247275" duration="5147000" />
     </task>
     <servers />
   </component>
