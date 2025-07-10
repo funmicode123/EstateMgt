@@ -2,23 +2,30 @@ name: Java CI with Maven
 
 on:
   push:
-    branches:['dev', 'master', "prod-support"]
+    branches: ['dev', 'master', 'prod-support']
   pull_request:
-    branches:['dev', 'master', "prod-support"]
+    branches: ['dev', 'master', 'prod-support']
 
-  jobs:
+jobs:
+  test:
+    name: Unit Test
+    runs-on: ubuntu-latest  # ✅ Specify a valid runner
 
-    test:
-      name: Unit Test
-      runs-on:
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # ✅ Updated to latest stable version
 
-      steps:
-        - uses: actions/ checkout@v1
-        - name: Set up JDK 22
-          uses: actions/setup-java@v1
-          with:
-            java-version: 1.22
-        - name: Maven Package
-          run: mvn -B clean package -DskipTests
-        - name: Maven verify
-          run: mvn -B clean verify
+      - name: Set up JDK 22
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  # ✅ Common distribution; use 'zulu' or 'oracle' if needed
+          java-version: '22'
+
+      - name: Build with Maven (skip tests)
+        run: mvn -B clean package -DskipTests
+
+      - name: Run unit tests
+        run: mvn -B test
+
+      - name: Verify project
+        run: mvn -B verify
