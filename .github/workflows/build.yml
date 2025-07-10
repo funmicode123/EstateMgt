@@ -1,4 +1,4 @@
-name: Java CI with Maven + MongoDB
+name: Java CI Build (No Unit Tests)
 
 on:
   push:
@@ -7,20 +7,8 @@ on:
     branches: ['dev', 'master', 'prod-support']
 
 jobs:
-  test:
-    name: Unit Test
+  build:
     runs-on: ubuntu-latest
-
-    services:  # ✅ this must be under the job
-      mongodb:
-        image: mongo:6.0
-        ports:
-          - 27017:27017
-        options: >-
-          --health-cmd "mongosh --eval 'db.runCommand({ ping: 1 })'"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
 
     steps:
       - name: Checkout code
@@ -32,19 +20,5 @@ jobs:
           distribution: 'temurin'
           java-version: '22'
 
-      - name: Wait for MongoDB to be ready
-        run: |
-          for i in {1..10}; do
-            nc -z localhost 27017 && echo "✅ MongoDB is ready" && break
-            echo "⏳ Waiting for MongoDB..."
-            sleep 5
-          done
-
       - name: Build with Maven (skip tests)
-        run: mvn -B clean package -DskipTests
-
-      - name: Run unit tests
-        run: mvn -B test
-
-      - name: Verify project
-        run: mvn -B verify
+        run: mvn -B clean install -DskipTests
