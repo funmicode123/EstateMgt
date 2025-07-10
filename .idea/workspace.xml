@@ -9,6 +9,7 @@
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/Bank+Customer+Churn/Bank_Churn_Messy.xlsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/Bank_Churn.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Data Science/practical_analysis/cohort 22.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/request/CreateAccountRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/request/CreateAccountRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/response/CreateAccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/dtos/response/CreateAccountResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/exception/EmailExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/src/main/java/org/example/exception/EmailExistException.java" afterDir="false" />
@@ -210,7 +211,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/DELL/Desktop/Estate/src/main/java/com/funmicode/Main.java",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
@@ -324,7 +325,7 @@
       <workItem from="1746443728984" duration="593000" />
       <workItem from="1746861725561" duration="597000" />
       <workItem from="1747208550807" duration="598000" />
-      <workItem from="1752143247275" duration="2497000" />
+      <workItem from="1752143247275" duration="2873000" />
     </task>
     <servers />
   </component>
