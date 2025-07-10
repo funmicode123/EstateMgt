@@ -25,7 +25,7 @@ public class Mapper {
 
     public User mapUserRequest(CreateSignupRequest request) {
         User user = new User();
-        user.setEmail(request.getEmail());
+        user.setEmail(request.getEmail()); 
         user.setPassword(request.getPassword());
         user.setRole(UserRole.fromString(request.getRole()));
         return user;

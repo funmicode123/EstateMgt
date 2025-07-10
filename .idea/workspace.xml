@@ -5,62 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="070ffa18-163b-4c19-9286-48ee15fda6c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/UserInterfaceMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/ResidentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/Apartment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/ExitPass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/OtpStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/model/VisitingLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/ApartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/ExitPassRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/data/repository/VisitingLogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ApartmentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/CreateSignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ExitPassRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/ExitRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/OtpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/request/OtpValidRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/ApartmentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/CreateSignupResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/ExitPassResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/OtpResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/dto/response/OtpValidResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/exception/OtpFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/AdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/OtpCleanupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/ResidentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/ResidentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/SecurityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/OTPGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/funmicode/service/ResidentServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/funmicode/service/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Architecture/.idea/misc.xml" afterDir="false" />
@@ -181,7 +126,9 @@
       <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/src/FindMissingNumber.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/NewArray/src/MutatingDigits.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/Task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/src/FindHcf.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/src/PhoneNumberValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/test/FindHcfTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Task/test/PhoneNumberValidatorTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/Tic-Tac-Toe/.idea/misc.xml" afterDir="false" />
@@ -217,6 +164,10 @@
       <change afterPath="$PROJECT_DIR$/../Java Exercise/logistic2/src/services/TrackingInfoService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/longisticApp/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java Exercise/longisticApp/logisticApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../classTask/FindHcf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../facebook/.idea/facebook.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/funmicode/utils/Mapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java Exercise/ClassTask/ClassTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Exercise/ClassTask/ClassTask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vitePractice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vitePractice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vitePractice/package.json" afterDir="false" />
@@ -393,6 +344,14 @@
       <workItem from="1741777449111" duration="1667000" />
       <workItem from="1741785523288" duration="81192000" />
       <workItem from="1742223497862" duration="2995000" />
+      <workItem from="1742477129712" duration="805000" />
+      <workItem from="1742679529949" duration="17481000" />
+      <workItem from="1742914766841" duration="3647000" />
+      <workItem from="1744300575074" duration="586000" />
+      <workItem from="1744913792691" duration="222000" />
+      <workItem from="1746443728984" duration="593000" />
+      <workItem from="1746861725561" duration="597000" />
+      <workItem from="1747208550807" duration="598000" />
     </task>
     <servers />
   </component>
