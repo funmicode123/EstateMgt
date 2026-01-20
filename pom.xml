@@ -58,12 +58,26 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--            <version>3.4.3</version>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>6.4.3</version> <!-- Aligning with Spring Boot 3.4.x managed dependencies generally, or just omit version if parent manages it, but since parent is generic, I'll provide a compatible version or just use the starter without web -->
+        </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>22</source>
+                    <target>22</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

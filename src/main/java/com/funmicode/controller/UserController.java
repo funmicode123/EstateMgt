@@ -36,5 +36,15 @@ public class UserController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@Valid @RequestBody com.funmicode.dto.request.ForgotPasswordRequest request) {
+        String response = userService.forgotPassword(request.getEmail());
+        return ResponseEntity.ok(response);
+    }
 
+    @PostMapping("/reset-password")
+    public ResponseEntity<String> resetPassword(@Valid @RequestBody com.funmicode.dto.request.ResetPasswordRequest request) {
+        String response = userService.resetPassword(request);
+        return ResponseEntity.ok(response);
+    }
 }

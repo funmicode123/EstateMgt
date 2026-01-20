@@ -8,4 +8,6 @@ import com.funmicode.dto.response.LoginResponse;
 public interface UserService {
     CreateSignupResponse signup(CreateSignupRequest request);
     LoginResponse login(LoginRequest request);
+    String forgotPassword(String email);
+    String resetPassword(com.funmicode.dto.request.ResetPasswordRequest request);
 }

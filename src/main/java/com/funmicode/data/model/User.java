@@ -29,5 +29,8 @@ public class User {
     @NotNull(message = "User role is required")
     private UserRole role;
 
+    private String otp;
+    private java.time.LocalDateTime otpExpiry;
+
     private List<String> visitorLogs = new ArrayList<>();
 }
