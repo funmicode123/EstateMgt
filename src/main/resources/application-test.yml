@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URL}
+
+  mail:
+    host: localhost
+    port: 2525
+
+  logging:
+  level:
+    root: INFO
+    org.springframework.data.mongodb.core: DEBUG

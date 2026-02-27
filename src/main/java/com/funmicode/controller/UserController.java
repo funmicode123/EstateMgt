@@ -47,4 +47,16 @@ public class UserController {
         String response = userService.resetPassword(request);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/profile")
+    public ResponseEntity<com.funmicode.dto.response.ProfileResponse> getProfile(@RequestParam String email) {
+        com.funmicode.dto.response.ProfileResponse response = userService.getProfile(email);
+        return ResponseEntity.ok(response);
+    }
+
+    @PutMapping("/profile")
+    public ResponseEntity<com.funmicode.dto.response.ProfileResponse> updateProfile(@RequestParam String email, @Valid @RequestBody com.funmicode.dto.request.ProfileUpdateRequest request) {
+        com.funmicode.dto.response.ProfileResponse response = userService.updateProfile(email, request);
+        return ResponseEntity.ok(response);
+    }
 }

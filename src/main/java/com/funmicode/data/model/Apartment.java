@@ -12,6 +12,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Apartment {
     @Id
     private String id;
+    @NotBlank(message = "House number is required")
+    private String houseNo;
     @NotBlank(message = "Specific block is required")
     private String block;
     @NotBlank(message = "Street name is required")

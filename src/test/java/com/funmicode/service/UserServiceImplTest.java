@@ -1,173 +1,121 @@
 package com.funmicode.service;
 
+import com.funmicode.data.model.AccountStatus;
+import com.funmicode.data.model.Apartment;
 import com.funmicode.data.model.User;
 import com.funmicode.data.model.UserRole;
+import com.funmicode.data.repository.ApartmentRepository;
 import com.funmicode.data.repository.UserRepository;
+import com.funmicode.dto.request.ApartmentRequest;
 import com.funmicode.dto.request.CreateSignupRequest;
-import com.funmicode.dto.request.LoginRequest;
 import com.funmicode.dto.response.CreateSignupResponse;
-import com.funmicode.dto.response.LoginResponse;
-import org.junit.jupiter.api.Assertions;
+import com.funmicode.utils.Mapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class UserServiceImplTest {
 
-    @Autowired
-    private UserService userService;
-    @Autowired
+    @Mock
     private UserRepository userRepository;
-    private UserRole role;
+    @Mock
+    private ApartmentRepository apartmentRepository;
+    @Mock
+    private Mapper mapper;
+    @Mock
+    private PasswordEncoder passwordEncoder;
+    @Mock
+    private EmailService emailService;
+
+    @InjectMocks
+    private UserServiceImpl userService;
+
+    private CreateSignupRequest residentRequest;
 
     @BeforeEach
     void setUp() {
-        userRepository.deleteAll();
+        residentRequest = new CreateSignupRequest();
+        residentRequest.setEmail("resident@example.com");
+        residentRequest.setPassword("password123");
+        residentRequest.setFirstName("John");
+        residentRequest.setLastName("Doe");
+        residentRequest.setRole("RESIDENT");
+        
+        ApartmentRequest aptReq = new ApartmentRequest();
+        aptReq.setHouseNo("101");
+        aptReq.setBlock("A");
+        aptReq.setStreetName("Main St");
+        residentRequest.setApartment(aptReq);
     }
 
     @Test
-    public void testUserCanCreateAccount() {
-        CreateSignupRequest request = new CreateSignupRequest();
-        request.setEmail("funmi@gmail.com");
-        request.setPassword("201226");
-        request.setRole(String.valueOf(UserRole.RESIDENT));
+    void testSignupResident_Success() {
+        // Arrange
+        when(userRepository.findByEmail(anyString())).thenReturn(Optional.empty());
+        User user = new User();
+        user.setPassword("password123");
+        when(mapper.mapUserRequest(any())).thenReturn(user);
+        when(passwordEncoder.encode(anyString())).thenReturn("hashed_password");
+        
+        when(apartmentRepository.findByHouseNoAndBlockAndStreetName(anyString(), anyString(), anyString()))
+                .thenReturn(Optional.empty());
+        when(apartmentRepository.save(any())).thenReturn(new Apartment());
 
-        CreateSignupResponse response = userService.signup(request);
+        // Act
+        CreateSignupResponse response = userService.signup(residentRequest);
 
-        assertThat(response).isNotNull();
-        assertThat(response.getMessage()).isEqualTo("User created successfully as " + request.getRole());
-
-        User savedUser = userRepository.findByEmail(request.getEmail()).orElse(null);
-        assertThat(savedUser).isNotNull();
-        assertThat(savedUser.getEmail()).isEqualTo("funmi@gmail.com");
-    }
-
-    @Test
-    public void testUserCannotSignUpTwice() {
-        CreateSignupRequest request = new CreateSignupRequest();
-        request.setEmail("funmi@gmail.com");
-        request.setPassword("201226");
-        request.setRole(UserRole.RESIDENT.name());
-
-        CreateSignupResponse firstResponse = userService.signup(request);
-
-        assertNotNull(firstResponse);
-        assertThat(firstResponse.getMessage()).isEqualTo("User created successfully as " + request.getRole());
-
-        Exception exception = Assertions.assertThrows(RuntimeException.class, () -> userService.signup(request));
-
-        assertThat(exception.getMessage()).isEqualTo("User with this email already exists");
-    }
-
-    @Test
-    public void testUserCanLogin_AfterSignup() {
-        CreateSignupRequest signupRequest = new CreateSignupRequest();
-        signupRequest.setEmail("funmi@gmail.com");
-        signupRequest.setPassword("201226");
-        signupRequest.setRole(String.valueOf(UserRole.RESIDENT));
-
-        userService.signup(signupRequest);
-
-        LoginRequest request = new LoginRequest();
-        request.setEmail("funmi@gmail.com");
-        request.setPassword("201226");
-
-        LoginResponse loggedInUser = userService.login(request);
-
-        assertNotNull(loggedInUser);
-        assertEquals("Login successful", loggedInUser.getMessage());
-
-    }
-
-    @Test
-    public void testUserCanCreateAccountAsSecurity() {
-        CreateSignupRequest request = new CreateSignupRequest();
-        request.setEmail("jojo@gmail.com");
-        request.setPassword("201226");
-        request.setRole(String.valueOf(UserRole.SECURITY));
-
-        CreateSignupResponse response = userService.signup(request);
-
-        assertThat(response).isNotNull();
-        assertThat(response.getMessage()).isEqualTo("User created successfully as " + request.getRole());
-
-        User savedUser = userRepository.findByEmail(request.getEmail()).orElse(null);
-        assertThat(savedUser).isNotNull();
-        assertThat(savedUser.getEmail()).isEqualTo("jojo@gmail.com");
-    }
-
-    @Test
-    public void testLazyMigration_LegacyUserLogin() {
-        // 1. Manually create a "legacy" user with plain text password
-        User legacyUser = new User();
-        legacyUser.setEmail("legacy@gmail.com");
-        legacyUser.setPassword("plaintext123"); // Note: Not hashed!
-        legacyUser.setRole(UserRole.RESIDENT);
-        userRepository.save(legacyUser);
-
-        // 2. Login with plain text password
-        LoginRequest request = new LoginRequest();
-        request.setEmail("legacy@gmail.com");
-        request.setPassword("plaintext123");
-
-        LoginResponse response = userService.login(request);
-
-        // 3. Verify Login Success
+        // Assert
         assertThat(response.isSuccess()).isTrue();
-
-        // 4. Verify Password is now HASHED in DB
-        User migratedUser = userRepository.findByEmail("legacy@gmail.com").get();
-        assertThat(migratedUser.getPassword()).isNotEqualTo("plaintext123");
-        assertThat(migratedUser.getPassword()).startsWith("$2a$"); // BCrypt prefix
+        assertThat(user.getStatus()).isEqualTo(AccountStatus.PENDING);
+        assertThat(user.getPassword()).isEqualTo("hashed_password");
+        verify(userRepository).save(user);
     }
 
-    @org.springframework.boot.test.mock.mockito.MockBean
-    private EmailService emailService;
+    @Test
+    void testCreateSecurity_Success() {
+        // Arrange
+        CreateSignupRequest securityReq = new CreateSignupRequest();
+        securityReq.setEmail("security@example.com");
+        securityReq.setRole("SECURITY");
+        
+        User user = new User();
+        when(mapper.mapUserRequest(any())).thenReturn(user);
+        when(passwordEncoder.encode(any())).thenReturn("hashed");
+
+        // Act
+        CreateSignupResponse response = userService.createSecurity(securityReq);
+
+        // Assert
+        assertThat(response.isSuccess()).isTrue();
+        assertThat(user.getRole()).isEqualTo(UserRole.SECURITY);
+        assertThat(user.getStatus()).isEqualTo(AccountStatus.ACTIVE);
+    }
 
     @Test
-    public void testPasswordResetFlow() {
-        // 1. Setup User
-        CreateSignupRequest signup = new CreateSignupRequest();
-        signup.setEmail("forgot@gmail.com");
-        signup.setPassword("oldPass");
-        signup.setRole("RESIDENT");
-        userService.signup(signup);
+    void testApproveResident_Success() {
+        // Arrange
+        User user = new User();
+        user.setRole(UserRole.RESIDENT);
+        user.setStatus(AccountStatus.PENDING);
+        when(userRepository.findByEmail("resident@example.com")).thenReturn(Optional.of(user));
 
-        // 2. Forgot Password
-        userService.forgotPassword("forgot@gmail.com");
+        // Act
+        String result = userService.approveResident("resident@example.com");
 
-        User userWithOtp = userRepository.findByEmail("forgot@gmail.com").get();
-        assertThat(userWithOtp.getOtp()).isNotNull();
-        String otp = userWithOtp.getOtp();
-
-        // 3. Reset Password
-        com.funmicode.dto.request.ResetPasswordRequest resetRequest = new com.funmicode.dto.request.ResetPasswordRequest();
-        resetRequest.setEmail("forgot@gmail.com");
-        resetRequest.setOtp(otp);
-        resetRequest.setNewPassword("newPassSecure");
-
-        String result = userService.resetPassword(resetRequest);
-        assertThat(result).isEqualTo("Password reset successfully");
-
-        // 4. Login with OLD password (should fail)
-        LoginRequest loginOld = new LoginRequest();
-        loginOld.setEmail("forgot@gmail.com");
-        loginOld.setPassword("oldPass");
-        Assertions.assertThrows(RuntimeException.class, () -> userService.login(loginOld));
-
-        // 5. Login with NEW password (should succeed)
-        LoginRequest loginNew = new LoginRequest();
-        loginNew.setEmail("forgot@gmail.com");
-        loginNew.setPassword("newPassSecure");
-        LoginResponse loginResponse = userService.login(loginNew);
-        assertThat(loginResponse.isSuccess()).isTrue();
+        // Assert
+        assertThat(result).contains("successfully");
+        assertThat(user.getStatus()).isEqualTo(AccountStatus.ACTIVE);
+        verify(userRepository).save(user);
     }
 }

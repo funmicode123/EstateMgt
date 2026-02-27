@@ -11,5 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CreateSignupResponse {
     private String message;
+    private String accessToken;
     private boolean success;
 }

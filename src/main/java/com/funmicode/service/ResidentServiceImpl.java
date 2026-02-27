@@ -49,6 +49,12 @@ public class ResidentServiceImpl implements ResidentService {
         log.setOtpCreatedTime(LocalDateTime.now());
         log.setOtpExpiredTime(LocalDateTime.now().plusMinutes(5));
         log.setOtpStatus(OtpStatus.PENDING);
+        
+        if (resident.get().getApartment() != null) {
+            com.funmicode.data.model.Apartment apt = resident.get().getApartment();
+            String aptDetails = String.format("House %s, Block %s, %s", apt.getHouseNo(), apt.getBlock(), apt.getStreetName());
+            log.setApartmentDetails(aptDetails);
+        }
 
         visitingLogRepository.save(log);
 

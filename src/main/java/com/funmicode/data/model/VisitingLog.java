@@ -19,7 +19,10 @@ public class VisitingLog {
     private String otp;
     private LocalDateTime otpCreatedTime;
     private LocalDateTime otpExpiredTime;
+    private LocalDateTime checkInTime;
+    private LocalDateTime checkOutTime;
+    private String securityGuardId; // ID of the security guard who checked them in
+
+    private String apartmentDetails; // Snapshot of apartment details for quick reference
     private OtpStatus otpStatus;
-
-
 }

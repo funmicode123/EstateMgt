@@ -12,4 +12,5 @@ import lombok.Setter;
 public class OtpValidResponse {
     private String message;
     private boolean success;
+    private String apartmentDetails;
 }

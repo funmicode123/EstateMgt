@@ -27,6 +27,10 @@ public class Mapper {
         User user = new User();
         user.setEmail(request.getEmail()); 
         user.setPassword(request.getPassword());
+        user.setFirstName(request.getFirstName());
+        user.setLastName(request.getLastName());
+        user.setPhoneNumber(request.getPhoneNumber());
+        user.setGateLocation(request.getGateLocation());
         user.setRole(UserRole.fromString(request.getRole()));
         return user;
     }

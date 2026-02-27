@@ -1,29 +1,14 @@
-# Stage 1: Build with Java 22 + Maven installed
-FROM eclipse-temurin:22 AS build
-
-# Install Maven manually
-RUN apt-get update && \
-    apt-get install -y maven && \
-    mvn -v
-
+# Build stage
+FROM maven:3.9-eclipse-temurin-21-alpine AS build
 WORKDIR /app
-
-# Copy project files
 COPY pom.xml .
-RUN mvn dependency:go-offline -B
-
-COPY . .
-
-# Build the app
+COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Stage 2: Runtime with JDK 22
-FROM eclipse-temurin:22
+# Run stage
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-
-COPY --from=build /app/target/*.jar estate.jar
-
-ENV PORT=8080
+COPY --from=build /app/target/*.jar app.jar
+ENV PORT=8081
 EXPOSE $PORT
-
-ENTRYPOINT ["sh", "-c", "java -jar -Dserver.port=$PORT estate.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar -Dserver.port=${PORT} app.jar"]
