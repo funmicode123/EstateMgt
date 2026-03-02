@@ -47,7 +47,7 @@ public class ResidentServiceImpl implements ResidentService {
         VisitingLog log = mapper.mapOtpRequest(otpRequest);
         log.setOtp(otp);
         log.setOtpCreatedTime(LocalDateTime.now());
-        log.setOtpExpiredTime(LocalDateTime.now().plusMinutes(5));
+        log.setOtpExpiredTime(LocalDateTime.now().plusMinutes(30));
         log.setOtpStatus(OtpStatus.PENDING);
         
         if (resident.get().getApartment() != null) {
