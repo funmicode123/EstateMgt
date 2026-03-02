@@ -77,16 +77,19 @@ public class ResidentServiceImpl implements ResidentService {
         }
 
         VisitingLog log = visitorLog.get();
+        LocalDateTime exitTime = LocalDateTime.now();
+        
+        // Update the main visiting log
+        log.setCheckOutTime(exitTime);
+        log.setOtpStatus(OtpStatus.EXITED);
+        visitingLogRepository.save(log);
 
         ExitPass exitPass = mapper.mapExitPassRequest(exitPassRequest);
-
         exitPass.setResidentEmail(log.getResidentEmail());
-        LocalDateTime exitTime = LocalDateTime.now();
         exitPass.setExitTime(exitTime);
-
         exitPassRepository.save(exitPass);
 
-        return new ExitPassResponse("Exit pass generated successfully for visitor: " + log.getVisitorName(), LocalDateTime.now(), true);
+        return new ExitPassResponse("Exit pass generated successfully for visitor: " + log.getVisitorName(), exitTime, true);
     }
 
 }
